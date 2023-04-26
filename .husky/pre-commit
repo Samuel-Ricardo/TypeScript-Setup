@@ -4,5 +4,7 @@
 npx lint-staged
 npm test
 
+git status
+
 #npm run lint 
 #npm run pretty
