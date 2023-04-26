@@ -1,1 +1,5 @@
-it("should true", () => expect(true).toBe(true))
+import { Pedro } from "@/model"
+
+it("should true", () => {
+  expect(new Pedro()).toBeInstanceOf(Pedro)
+})

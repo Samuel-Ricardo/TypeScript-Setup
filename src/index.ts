@@ -1,3 +1,5 @@
+import { Pedro } from "@/model"
+
 const message = "Hello World!"
 
-console.log(message)
+console.log(message, { PEDRO: new Pedro().pedro() })
