@@ -10,8 +10,27 @@ export default {
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
 
+  // An array of glob patterns indicating a set of files for which coverage information should be collected
+  collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
+
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",
+
+  // A list of paths to directories that Jest should use to search for files in
+  roots: ["<rootDir>/src"],
+
+  // The test environment that will be used for testing
+  testEnvironment: "jest-environment-node",
+
+  // A map from regular expressions to paths to transformers
+  transform: {
+    ".+\\.ts$": "ts-jest",
+  },
+
+  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
+  moduleNameMapper: {
+    "@/(.*)": "<rootDir>/src/$1",
+  },
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -24,9 +43,6 @@ export default {
 
   // Automatically clear mock calls, instances, contexts and results before every test
   // clearMocks: false,
-
-  // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: undefined,
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -87,9 +103,6 @@ export default {
   //   "node"
   // ],
 
-  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
-
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
 
@@ -123,11 +136,6 @@ export default {
   // The root directory that Jest should scan for tests and modules within
   // rootDir: undefined,
 
-  // A list of paths to directories that Jest should use to search for files in
-  // roots: [
-  //   "<rootDir>"
-  // ],
-
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
 
@@ -142,9 +150,6 @@ export default {
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
-
-  // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-node",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -171,9 +176,6 @@ export default {
 
   // This option allows use of a custom test runner
   // testRunner: "jest-circus/runner",
-
-  // A map from regular expressions to paths to transformers
-  // transform: undefined,
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
