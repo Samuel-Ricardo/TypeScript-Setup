@@ -11,7 +11,10 @@
     "pretty": "prettier --write --check ./src/**",
     "precommit": "npm run lint-fix && npm run pretty",
     "prepush": "npm run lint",
-    "test": "jest --passWithNoTests"
+    "coverage": "jest --coverage",
+    "test": "jest --passWithNoTests --color",
+    "test:dev": "jest --watchAll --color",
+    "test:staged": "jest --findRelatedTests  --color ."
   },
   "keywords": [],
   "author": "",
