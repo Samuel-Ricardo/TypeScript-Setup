@@ -11,13 +11,13 @@ export default {
   coverageDirectory: "coverage",
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
+  collectCoverageFrom: ["<rootDir>/src/**/*.ts", "<rootDir>/test/**/*.ts"],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",
 
   // A list of paths to directories that Jest should use to search for files in
-  roots: ["<rootDir>/src"],
+  roots: ["<rootDir>/src", "<rootDir>/test"],
 
   // The test environment that will be used for testing
   testEnvironment: "jest-environment-node",
@@ -28,9 +28,10 @@ export default {
   },
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  moduleNameMapper: {
-    "@/(.*)": "<rootDir>/src/$1",
-  },
+  //  moduleNameMapper: {
+  //    "@/(.*)": "<rootDir>/src/$1",
+  //    "@/(.*)": "<rootDir>/test/$1",
+  //  },
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
