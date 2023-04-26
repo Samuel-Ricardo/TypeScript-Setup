@@ -17,7 +17,7 @@
     "typescript": "^5.0.4"
   },
   "devDependencies": {
-    "eslinter": "^3.2.1",
+    "eslint": "^8.39.0",
     "prettier": "^2.8.8"
   }
 }
