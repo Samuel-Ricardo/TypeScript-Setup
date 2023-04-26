@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
     "start:dev": "nodemon --watch ./src/ --exec ts-node ./src/ -e ts",
     "husky:prepare": "husky install",
     "husky:setup-hooks": "npx husky add .husky/pre-commit 'npx lint-staged'",
