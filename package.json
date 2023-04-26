@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^29.5.1",
     "@types/node": "^18.16.1",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
